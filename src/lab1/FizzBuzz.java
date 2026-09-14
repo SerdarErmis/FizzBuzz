@@ -10,11 +10,12 @@ class FizzBuzz {
         int i = 1;
         while (i <= 100) {
 
-            i = doFizzBuzz(i);
+            doFizzBuzz(i);
+            i++;
         }
     }
 
-    private static int doFizzBuzz(int i) {
+    public static int doFizzBuzz(int i) {
         // Find out which numbers divide i.
         boolean divisibleBy3 = i % 3 == 0;
         boolean divisibleBy5 = i % 5 == 0;
@@ -23,22 +24,18 @@ class FizzBuzz {
         if (divisibleBy3 && divisibleBy5) {
 
             System.out.println("Fizz Buzz");
-            i++;
 
         } else if (divisibleBy3) {
 
             System.out.println("Fizz");
-            i++;
 
         } else if (divisibleBy5) {
 
             System.out.println("Buzz");
-            i++;
 
         } else {
 
             System.out.println(i);
-            i++;
 
         }
         return i;
